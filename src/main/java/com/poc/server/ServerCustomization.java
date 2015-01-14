@@ -1,4 +1,4 @@
-package com.kamoor.server;
+package com.poc.server;
 
 import org.apache.log4j.Logger;
 import org.springframework.boot.autoconfigure.web.ServerProperties;

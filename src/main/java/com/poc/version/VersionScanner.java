@@ -1,4 +1,4 @@
-package com.kamoor.version;
+package com.poc.version;
 
 import java.lang.reflect.Method;
 import java.util.HashMap;

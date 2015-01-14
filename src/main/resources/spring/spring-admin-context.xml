@@ -20,7 +20,7 @@
       	   ">
 
 
-	<context:component-scan base-package="com.nube, com.kamoor"  />
+	<context:component-scan base-package="com.poc"  />
 		
 	<!-- Enable annotation driven tasks -->
 	<aop:aspectj-autoproxy/>

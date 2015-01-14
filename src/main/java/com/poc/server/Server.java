@@ -1,4 +1,4 @@
-package com.kamoor.server;
+package com.poc.server;
 
 import java.util.Arrays;
 

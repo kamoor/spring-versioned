@@ -1,4 +1,4 @@
-package com.kamoor.version;
+package com.poc.version;
 import org.apache.log4j.Logger;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;

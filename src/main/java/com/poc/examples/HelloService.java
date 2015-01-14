@@ -1,8 +1,8 @@
-package com.kamoor.examples;
+package com.poc.examples;
 
 import org.springframework.stereotype.Service;
 
-import com.kamoor.version.Versioned;
+import com.poc.version.Versioned;
 
 @Service
 public class HelloService {

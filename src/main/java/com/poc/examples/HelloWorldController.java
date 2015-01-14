@@ -1,4 +1,4 @@
-package com.kamoor.examples;
+package com.poc.examples;
 
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;

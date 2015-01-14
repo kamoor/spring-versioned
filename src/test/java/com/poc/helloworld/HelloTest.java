@@ -1,4 +1,4 @@
-package com.kamoor.helloworld;
+package com.poc.helloworld;
 
 import org.junit.Assert;
 import org.junit.Ignore;
@@ -12,7 +12,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
 
-import com.kamoor.server.Server;
+import com.poc.server.Server;
 
 
 @RunWith(SpringJUnit4ClassRunner.class)
