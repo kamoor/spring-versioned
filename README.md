@@ -17,9 +17,9 @@ public String helloV2(String message){
    return "Hola "+ message;
 }
 
-Properties Entry:
-feature.helloworld=1 will make sure return message is "Hello"+ message
-feature.helloworld=2 will make sure return message is "Hola"+ message
+Watch following behavior with property file,
+1. feature.helloworld=1 property will make sure return message is "Hello"+ message
+2. feature.helloworld=2 property will make sure return message is "Hola"+ message
 
 Usage:
 ------
