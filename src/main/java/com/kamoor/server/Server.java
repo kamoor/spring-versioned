@@ -1,15 +1,11 @@
-package com.nube.portal.server;
+package com.kamoor.server;
 
 import java.util.Arrays;
 
-import javax.servlet.MultipartConfigElement;
-
 import org.apache.log4j.Logger;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.web.ServerProperties;
-import org.springframework.boot.context.embedded.MultipartConfigFactory;
 import org.springframework.cache.CacheManager;
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.cache.concurrent.ConcurrentMapCache;
@@ -34,21 +30,26 @@ import org.springframework.context.annotation.PropertySource;
 @ComponentScan
 @EnableCaching
 @PropertySource(ignoreResourceNotFound = true, value = {
-		"classpath:application.properties", 
-		"classpath:admin.properties",
-		"classpath:nube-portal.properties",
-		"classpath:nube-portal-custom.properties" })
+		"classpath:application.properties", "classpath:feature-rollout.properties"})
 @ImportResource(value = { "classpath*:spring/*.xml" })
 @EnableAspectJAutoProxy
 public class Server {
-
-
-	static Logger logger = Logger.getLogger(Server.class);
 
 	public static void main(String[] args) {
 
 		System.out.println("Start Nube cloud application manager");
 		SpringApplication.run(Server.class, args);
+	}
+
+	static Logger logger = Logger.getLogger(Server.class);
+
+	@Bean(name = "cacheManager")
+	public CacheManager cacheManager() {
+		SimpleCacheManager cacheManager = new SimpleCacheManager();
+		cacheManager
+				.setCaches(Arrays.asList(new ConcurrentMapCache("content")));
+
+		return cacheManager;
 	}
 
 	/**
@@ -59,16 +60,6 @@ public class Server {
 	@Bean
 	public ServerProperties getServerProperties() {
 		return new ServerCustomization();
-	}
-
-
-	@Bean(name = "cacheManager")
-	public CacheManager cacheManager() {
-		SimpleCacheManager cacheManager = new SimpleCacheManager();
-		cacheManager
-				.setCaches(Arrays.asList(new ConcurrentMapCache("content")));
-
-		return cacheManager;
 	}
 
 	/**

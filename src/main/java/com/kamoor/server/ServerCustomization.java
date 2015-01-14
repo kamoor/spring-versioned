@@ -1,4 +1,4 @@
-package com.nube.portal.server;
+package com.kamoor.server;
 
 import org.apache.log4j.Logger;
 import org.springframework.boot.autoconfigure.web.ServerProperties;
