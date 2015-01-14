@@ -19,19 +19,19 @@ public String helloV2(String message){
 }
 ```
 ```
-Watch following behavior with property file,
+Watch following behavior,
 1. feature.helloworld=1 property will make sure return message is "Hello"+ message
 2. feature.helloworld=2 property will make sure return message is "Hola"+ message
 ```
 
 Usage:
 ------
-This can be used to roll out bug fixes and features to production and keep it versioned in runtime. Activate or rollback with out code change or too much  hassle. 
+This can be used to roll out bug fixes and features to production and keep it versioned in runtime. Activate or roll back with out code change or too much  hassle. 
 
 
 Note:
 -----
-This is thread safe because version-ed methods will execute on the same target object all the time.
+This is thread safe . Methods executes on the same target object all the time.
 
 Build and Deploy
 ----------------
