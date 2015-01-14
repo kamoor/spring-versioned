@@ -6,20 +6,23 @@ In any spring bean, you can add @Versioned(feature, version) annotation at metho
 Runtime will execute active version of code only. 
 
 Example:
-
+```
 @Versioned("feature.helloworld", 1)
 public String hello(String message){
    return "Hello "+ message;
 }
-
+```
+```
 @Versioned("feature.helloworld", 2)
 public String helloV2(String message){
    return "Hola "+ message;
 }
-
+```
+```
 Watch following behavior with property file,
 1. feature.helloworld=1 property will make sure return message is "Hello"+ message
 2. feature.helloworld=2 property will make sure return message is "Hola"+ message
+```
 
 Usage:
 ------
