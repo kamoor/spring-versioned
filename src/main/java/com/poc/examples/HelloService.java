@@ -4,7 +4,7 @@ import org.springframework.stereotype.Service;
 
 import com.poc.version.Versioned;
 
-@Service
+@Service("helloService")
 public class HelloService {
 
 	String message;

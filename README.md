@@ -1,4 +1,4 @@
-This is a simple proof of concept to show versioning features at method level.
+This is a simple proof of concept to show versioning features at method level by using Spring AOP.
 
 How?
 ----
